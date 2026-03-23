@@ -4,6 +4,7 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { Users, FileText, Euro, TrendingUp, AlertTriangle, Calendar, Mail, RefreshCw } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
+import WeatherWidget from '../components/WeatherWidget'
 
 function KpiCard({ icon: Icon, label, value, sub, color = 'brand', alert }) {
   const colors = {
@@ -85,6 +86,34 @@ export default function Dashboard() {
         <KpiCard icon={FileText} label="Affaires actives" value={k.affairesActives || 0} sub={`+${k.affairesMois || 0} ce mois`} color="brand" />
         <KpiCard icon={TrendingUp} label="Taux conversion devis" value={`${k.tauxConversionDevis || 0}%`} color="brand" />
         <KpiCard icon={Mail} label="Emails non traités" value={k.emailsNonTraites || 0} color="orange" alert={k.emailsNonTraites > 5} />
+      </div>
+
+      {/* Météo */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <WeatherWidget />
+        <div className="card flex flex-col justify-between">
+          <h2 className="font-semibold text-gray-800 mb-3">Conseil du jour</h2>
+          <p className="text-sm text-gray-500 flex-1">
+            Vérifiez la météo avant de planifier vos chantiers. Un vent &gt; 50 km/h ou des précipitations importantes peuvent retarder les travaux de taille, plantation ou terrassement.
+          </p>
+          <div className="mt-4 grid grid-cols-3 gap-2 text-center text-xs text-gray-500">
+            <div className="bg-brand-50 rounded-lg p-2">
+              <p className="text-lg">🌱</p>
+              <p className="font-medium text-brand-700">Plantation</p>
+              <p>10–25°C</p>
+            </div>
+            <div className="bg-blue-50 rounded-lg p-2">
+              <p className="text-lg">✂️</p>
+              <p className="font-medium text-blue-700">Taille</p>
+              <p>Pas de gel</p>
+            </div>
+            <div className="bg-orange-50 rounded-lg p-2">
+              <p className="text-lg">🏗️</p>
+              <p className="font-medium text-orange-700">Terrassement</p>
+              <p>Sol sec</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
