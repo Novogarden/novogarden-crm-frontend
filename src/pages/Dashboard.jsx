@@ -92,25 +92,25 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <WeatherWidget />
         <div className="card flex flex-col justify-between">
-          <h2 className="font-semibold text-gray-800 mb-3">Conseil du jour</h2>
+          <h2 className="font-semibold text-gray-800 mb-3">Conditions de tonte</h2>
           <p className="text-sm text-gray-500 flex-1">
-            Vérifiez la météo avant de planifier vos chantiers. Un vent &gt; 50 km/h ou des précipitations importantes peuvent retarder les travaux de taille, plantation ou terrassement.
+            Le robot Lymow One nécessite un sol portant et une herbe sèche. Évitez les interventions par pluie intense, sol gorgé d'eau ou gel. Annulation gratuite jusqu'à 48h avant.
           </p>
           <div className="mt-4 grid grid-cols-3 gap-2 text-center text-xs text-gray-500">
             <div className="bg-brand-50 rounded-lg p-2">
-              <p className="text-lg">🌱</p>
-              <p className="font-medium text-brand-700">Plantation</p>
-              <p>10–25°C</p>
+              <p className="text-lg">🤖</p>
+              <p className="font-medium text-brand-700">Robot OK</p>
+              <p>Sol sec, &gt;5°C</p>
             </div>
             <div className="bg-blue-50 rounded-lg p-2">
-              <p className="text-lg">✂️</p>
-              <p className="font-medium text-blue-700">Taille</p>
-              <p>Pas de gel</p>
+              <p className="text-lg">🌿</p>
+              <p className="font-medium text-blue-700">Pousse rapide</p>
+              <p>15–25°C</p>
             </div>
             <div className="bg-orange-50 rounded-lg p-2">
-              <p className="text-lg">🏗️</p>
-              <p className="font-medium text-orange-700">Terrassement</p>
-              <p>Sol sec</p>
+              <p className="text-lg">💧</p>
+              <p className="font-medium text-orange-700">Sol humide</p>
+              <p>Attendre 24h</p>
             </div>
           </div>
         </div>

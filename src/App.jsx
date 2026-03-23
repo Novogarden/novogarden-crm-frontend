@@ -11,6 +11,7 @@ import Emails from './pages/Emails'
 import Social from './pages/Social'
 import Wix from './pages/Wix'
 import Settings from './pages/Settings'
+import Documents from './pages/Documents'
 
 function PrivateRoute({ children }) {
   const { user, loading } = useAuth()
@@ -34,6 +35,7 @@ export default function App() {
             <Route path="emails" element={<Emails />} />
             <Route path="social" element={<Social />} />
             <Route path="wix" element={<Wix />} />
+            <Route path="documents" element={<Documents />} />
             <Route path="settings" element={<Settings />} />
           </Route>
         </Routes>

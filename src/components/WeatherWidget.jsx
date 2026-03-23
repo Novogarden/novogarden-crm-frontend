@@ -129,13 +129,13 @@ export default function WeatherWidget() {
           </div>
         </div>
 
-        {/* Badge chantier */}
+        {/* Badge tonte */}
         <div className={`px-3 py-1.5 rounded-full text-xs font-semibold ${
           canWork
             ? 'bg-brand-50 text-brand-700 border border-brand-200'
             : 'bg-red-50 text-red-700 border border-red-200'
         }`}>
-          {canWork ? '✅ Chantier OK' : '⚠️ Déconseillé'}
+          {canWork ? '🤖 Tonte OK' : '⚠️ Tonte déconseillée'}
         </div>
       </div>
 
