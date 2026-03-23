@@ -2,7 +2,7 @@ import { Outlet, NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import {
   LayoutDashboard, GitBranch, Users, FileText,
-  AlertTriangle, Mail, BarChart2, Globe, Settings, LogOut, Leaf, FolderOpen
+  AlertTriangle, Mail, BarChart2, Globe, Settings, LogOut, Leaf, FolderOpen, TrendingDown
 } from 'lucide-react'
 
 const NAV = [
@@ -11,6 +11,7 @@ const NAV = [
   { to: '/affaires', icon: FileText, label: 'Affaires' },
   { to: '/clients', icon: Users, label: 'Clients' },
   { to: '/documents', icon: FolderOpen, label: 'Documents' },
+  { to: '/charges', icon: TrendingDown, label: 'Charges' },
   { to: '/reclamations', icon: AlertTriangle, label: 'Réclamations' },
   { to: '/emails', icon: Mail, label: 'Emails' },
   { to: '/social', icon: BarChart2, label: 'Réseaux sociaux' },
